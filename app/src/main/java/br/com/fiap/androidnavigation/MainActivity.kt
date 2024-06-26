@@ -19,6 +19,7 @@ import br.com.fiap.androidnavigation.databinding.ActivityMainBinding
 class MainActivity : ComponentActivity() {
 
     private lateinit var binding : ActivityMainBinding
+    private val MAIN_ACTIVITY_TAG = getString(R.string.title_activity_main)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,11 +28,41 @@ class MainActivity : ComponentActivity() {
 
         setContentView(binding.root)
         
-        Log.i("AppTest", "I'm working")
+        Log.i(MAIN_ACTIVITY_TAG, "App started")
 
         binding.btnDiveIn.setOnClickListener{
-            Log.i("AppTest", "Button clicked. Diving in...")
+            Log.i(MAIN_ACTIVITY_TAG, "Button clicked. Diving in...")
             Toast.makeText(this, "Diving in...", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i(MAIN_ACTIVITY_TAG, "App started")
+    }
+
+    override fun onRestart(){
+        super.onRestart()
+        Log.i(MAIN_ACTIVITY_TAG, "App restarted")
+    }
+
+    override fun onPause(){
+        super.onPause()
+        Log.i(MAIN_ACTIVITY_TAG, "App paused")
+    }
+
+    override fun onResume(){
+        super.onResume()
+        Log.i(MAIN_ACTIVITY_TAG, "App resumed")
+    }
+
+    override fun onStop(){
+        super.onStop()
+        Log.i(MAIN_ACTIVITY_TAG, "App stopped")
+    }
+
+    override fun onDestroy(){
+        super.onDestroy()
+        Log.i(MAIN_ACTIVITY_TAG, "App destroyed")
     }
 }
