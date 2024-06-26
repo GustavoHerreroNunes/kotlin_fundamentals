@@ -1,4 +1,4 @@
-package br.com.fiap.aplicacaovazia
+package br.com.fiap.androidnavigation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,12 +10,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.fiap.aplicacaovazia.ui.theme.AplicacaoVaziaTheme
+import br.com.fiap.androidnavigation.ui.theme.AndroidNavigationTheme
 import android.util.Log
 import android.widget.Toast
 import android.content.Intent
-import br.com.fiap.aplicacaovazia.databinding.ActivityMainBinding
-import br.com.fiap.aplicacaovazia.DiveInActivity
+import br.com.fiap.androidnavigation.databinding.ActivityMainBinding
 
 class MainActivity : ComponentActivity() {
 
@@ -33,10 +32,6 @@ class MainActivity : ComponentActivity() {
         binding.btnDiveIn.setOnClickListener{
             Log.i("AppTest", "Button clicked. Diving in...")
             Toast.makeText(this, "Diving in...", Toast.LENGTH_SHORT).show()
-            
-            //Create an Intent to navigate to the DiveInActivity
-            val intent = Intent(this, DiveInActivity::class.java)
-            startActivity(intent)
         }
     }
 }
