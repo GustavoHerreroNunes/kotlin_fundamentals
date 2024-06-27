@@ -1,4 +1,4 @@
-package br.com.fiap.androidnavigation.ui.theme
+package br.com.fiap.aplicacaovazia.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "br.com.fiap.androidnavigation"
+    namespace = "br.com.fiap.aplicacaovazia"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "br.com.fiap.androidnavigation"
+        applicationId = "br.com.fiap.aplicacaovazia"
         minSdk = 27
         targetSdk = 34
         versionCode = 1

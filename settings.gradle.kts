@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AndroidNavigation"
+rootProject.name = "AplicacaoVazia"
 include(":app")
  
