@@ -13,34 +13,17 @@
         android:layout_height="wrap_content"
         />
     <TextView
-        android:text="Welcome, to Main Activity!"
+        android:text="Welcome to Consult User Activity!"
         android:textSize="25sp"
         android:layout_marginTop="15sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
-
     <Button
-        android:id="@+id/btnAddTask"
-        android:text="Go to Add Task"
-        android:textSize="25sp"
-        android:layout_marginTop="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-    <Button
-        android:id="@+id/btnAddUser"
-        android:text="Go to Add User"
+        android:id="@+id/btnBack"
+        android:text="Back to Main Activity"
         android:textSize="25sp"
         android:layout_marginTop="15sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-    <Button
-        android:id="@+id/btnConsultUser"
-        android:text="Go to Consult User"
-        android:textSize="25sp"
-        android:layout_marginTop="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />

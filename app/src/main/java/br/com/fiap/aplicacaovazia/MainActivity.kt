@@ -15,28 +15,66 @@ import android.util.Log
 import android.widget.Toast
 import android.content.Intent
 import br.com.fiap.aplicacaovazia.databinding.ActivityMainBinding
-import br.com.fiap.aplicacaovazia.DiveInActivity
 
 class MainActivity : ComponentActivity() {
 
     private lateinit var binding : ActivityMainBinding
+    private lateinit var MAIN_ACTIVITY_TAG : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        MAIN_ACTIVITY_TAG = getString(R.string.title_activity_main)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
         
-        Log.i("AppTest", "I'm working")
+        Log.i(MAIN_ACTIVITY_TAG, "Activity created")
 
-        binding.btnDiveIn.setOnClickListener{
-            Log.i("AppTest", "Button clicked. Diving in...")
-            Toast.makeText(this, "Diving in...", Toast.LENGTH_SHORT).show()
-            
-            //Create an Intent to navigate to the DiveInActivity
-            val intent = Intent(this, DiveInActivity::class.java)
+        binding.btnAddTask.setOnClickListener {
+            Log.i(MAIN_ACTIVITY_TAG, "Moving to AddTaskActivity")
+            val intent = Intent(this, AddTaskActivity::class.java)
             startActivity(intent)
         }
+        binding.btnAddUser.setOnClickListener {
+            Log.i(MAIN_ACTIVITY_TAG, "Moving to AddUserActivity")
+            val intent = Intent(this, AddUserActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnConsultUser.setOnClickListener {
+            Log.i(MAIN_ACTIVITY_TAG, "Moving to ConsultUserActivity")
+            val intent = Intent(this, ConsultUserActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i(MAIN_ACTIVITY_TAG, "Activity started")
+    }
+
+    override fun onRestart(){
+        super.onRestart()
+        Log.i(MAIN_ACTIVITY_TAG, "Activity restarted")
+    }
+
+    override fun onPause(){
+        super.onPause()
+        Log.i(MAIN_ACTIVITY_TAG, "Activity paused")
+    }
+
+    override fun onResume(){
+        super.onResume()
+        Log.i(MAIN_ACTIVITY_TAG, "Activity resumed")
+    }
+
+    override fun onStop(){
+        super.onStop()
+        Log.i(MAIN_ACTIVITY_TAG, "Activity stopped")
+    }
+
+    override fun onDestroy(){
+        super.onDestroy()
+        Log.i(MAIN_ACTIVITY_TAG, "Activity destroyed")
     }
 }
