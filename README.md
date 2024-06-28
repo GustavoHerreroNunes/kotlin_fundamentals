@@ -5,5 +5,5 @@ Testing codespace configurations and resources to create a Android Developer
 Sequence of cmd-line commands:
 ```shell
 gradlew installDebug
-adb logcat AppTest:I *:S -v color;breif -d
+adb logcat MainActivity:I AddTaskActivity:I AddUserActivity:I ConsultUserActivity:I *:F -v color;breif -d
 ```
